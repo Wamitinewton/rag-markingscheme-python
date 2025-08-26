@@ -12,7 +12,7 @@ class PDFGenerator:
     def __init__(self):
         self.styles = getSampleStyleSheet()
         self._setup_custom_styles()
-    
+
     def _setup_custom_styles(self):
         self.title_style = ParagraphStyle(
             'CustomTitle',
@@ -40,7 +40,7 @@ class PDFGenerator:
             leftIndent=40,
             rightIndent=20
         )
-    
+
     def generate_answer_scheme(self, questions_answers: List[Dict], document_id: str) -> str:
         os.makedirs(settings.OUTPUT_DIR, exist_ok=True)
         
